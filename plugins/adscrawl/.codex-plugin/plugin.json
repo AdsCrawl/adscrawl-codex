@@ -1,0 +1,33 @@
+{
+  "name": "adscrawl",
+  "version": "0.1.0",
+  "description": "Read rendered web pages and capture screenshots with AdsCrawl browsers.",
+  "author": {
+    "name": "AdsCrawl",
+    "url": "https://www.adscrawl.net"
+  },
+  "homepage": "https://www.adscrawl.net/docs/",
+  "repository": "https://github.com/AdsCrawl/adscrawl-codex",
+  "license": "MIT",
+  "keywords": ["browser", "web scraping", "screenshots", "research"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AdsCrawl",
+    "shortDescription": "Read rendered pages and capture browser screenshots.",
+    "longDescription": "AdsCrawl lets Codex fetch browser-rendered Markdown, HTML and article data, capture PNG screenshots, and use remote browser sessions for interactive work.",
+    "developerName": "AdsCrawl",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.adscrawl.net/",
+    "privacyPolicyURL": "https://www.adscrawl.net/privacy-policy/",
+    "termsOfServiceURL": "https://www.adscrawl.net/terms-of-service/",
+    "defaultPrompt": [
+      "Read this JavaScript-heavy page and summarize it.",
+      "Capture a full-page screenshot of this URL.",
+      "Extract the main article from this page."
+    ],
+    "brandColor": "#111827",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

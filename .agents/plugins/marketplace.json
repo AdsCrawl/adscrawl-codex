@@ -1,0 +1,20 @@
+{
+  "name": "adscrawl",
+  "interface": {
+    "displayName": "AdsCrawl"
+  },
+  "plugins": [
+    {
+      "name": "adscrawl",
+      "source": {
+        "source": "local",
+        "path": "./plugins/adscrawl"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
