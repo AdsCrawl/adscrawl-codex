@@ -5,7 +5,7 @@ Submission type: **Skills only**. The browser workflow calls the AdsCrawl HTTPS 
 Suggested listing:
 
 - Name: AdsCrawl
-- Short description: Read rendered pages and capture browser screenshots.
+- Short description: Render pages and screenshots
 - Long description: Fetch browser-rendered Markdown, HTML, and article data; capture PNG screenshots; and use remote browser sessions for interactive web work.
 - Developer: AdsCrawl
 - Website: <https://www.adscrawl.net/>

@@ -1,6 +1,6 @@
 {
   "name": "adscrawl",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read rendered web pages and capture screenshots with AdsCrawl browsers.",
   "author": {
     "name": "AdsCrawl",
@@ -13,7 +13,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "AdsCrawl",
-    "shortDescription": "Read rendered pages and capture browser screenshots.",
+    "shortDescription": "Render pages and screenshots",
     "longDescription": "AdsCrawl lets Codex fetch browser-rendered Markdown, HTML and article data, capture PNG screenshots, and use remote browser sessions for interactive work.",
     "developerName": "AdsCrawl",
     "category": "Developer Tools",
