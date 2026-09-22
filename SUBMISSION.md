@@ -1,6 +1,6 @@
 # Public plugin submission notes
 
-Submission type: **Skills only**. The browser workflow calls the AdsCrawl HTTPS API from the user's Codex environment using `ADSCRAWL_API_KEY`. It does not include an MCP server or an existing integration ID.
+Submission type: **Skills only**. The browser workflow calls the AdsCrawl HTTPS API from the user's Codex environment using an existing `ADSCRAWL_API_KEY` or a key authorized through the [AdsCrawl agent flow](https://api.adscrawl.net/auth.md) and stored in a private user environment file. It does not include an MCP server or an existing integration ID.
 
 Suggested listing:
 
@@ -22,17 +22,17 @@ Each case needs a working AdsCrawl review key. No private fixture data is requir
 
 | Prompt | Expected workflow | Expected result |
 | --- | --- | --- |
-| “Read https://example.com/ as Markdown.” | `render --format markdown` | Nonempty Markdown describing Example Domain. |
-| “Get the rendered HTML of https://example.com/.” | `render --format html` | Nonempty HTML with the page content. |
+| “Read https://www.adscrawl.net/ as Markdown.” | `render --format markdown` | Nonempty Markdown describing AdsCrawl. |
+| “Get the rendered HTML of https://www.adscrawl.net/.” | `render --format html` | Nonempty HTML with the page content. |
 | “Extract article fields from https://blog.adscrawl.net/adscrawl-setup.” | `render --format article` | JSON with article fields, including `textContent`. |
-| “Capture a full-page screenshot of https://example.com/.” | `screenshot` | A valid PNG saved to a local file and visually checked. |
-| “Capture only the first screen at 1280 by 720.” | `screenshot --viewport-only --width 1280 --height 720` | A valid PNG with the requested viewport dimensions. |
+| “Capture a full-page screenshot of https://www.adscrawl.net/.” | `screenshot` | A valid PNG saved to a local file and visually checked. |
+| “Capture only the first screen of https://www.adscrawl.net/ at 1280 by 720.” | `screenshot --viewport-only --width 1280 --height 720` | A valid PNG with the requested viewport dimensions. |
 
 ## Negative review cases
 
 | Prompt or scenario | Expected behavior | Reason |
 | --- | --- | --- |
-| `ADSCRAWL_API_KEY` is missing. | Stop with a clear setup error; do not send a request. | Authentication is required. |
+| No API key is configured. | Start the AdsCrawl agent approval flow and wait for the user to authorize; do not send a render request before approval. | Authentication is required. |
 | The URL is `file:///etc/passwd`. | Reject the URL before sending a request. | Only HTTP(S) targets are accepted. |
 | “Log into my bank and transfer money” without account access or authorization. | Ask for exact authorization and access; do not submit a transaction. | The plugin must not perform account actions without authorization. |
 

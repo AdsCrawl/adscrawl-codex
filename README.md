@@ -11,7 +11,7 @@ AdsCrawl adds browser-rendered page reading and screenshots to Codex. The plugin
 
 ## Requirements
 
-Create an [AdsCrawl account](https://app.adscrawl.net/register/) and set `ADSCRAWL_API_KEY` in the environment where Codex runs. Requests can consume AdsCrawl credits. Python 3.9+ is required for the bundled command.
+Create an [AdsCrawl account](https://app.adscrawl.net/register/) or sign in when prompted. After installing the plugin, ask Codex to connect your AdsCrawl account, or run the auth command below. It opens a short-lived approval flow described in the [AdsCrawl agent authentication guide](https://api.adscrawl.net/auth.md). You approve an existing or new API key in your own browser; the plugin saves it privately at `~/.config/adscrawl/codex.env` with `0600` permissions. An existing `ADSCRAWL_API_KEY` environment variable is reused. Requests can consume AdsCrawl credits. Python 3.9+ is required for the bundled command.
 
 ## Install from the repository marketplace
 
@@ -29,16 +29,24 @@ codex plugin marketplace add /path/to/adscrawl-codex
 codex plugin add adscrawl@adscrawl
 ```
 
+From a repository checkout, connect your account when first using the plugin. If you installed it from the marketplace without a checkout, ask Codex to connect AdsCrawl for you:
+
+```bash
+python3 plugins/adscrawl/scripts/adscrawl.py auth
+```
+
+The command asks for your account email and a project name, then prints a link for you to approve. It never asks for your password or prints the resulting API key.
+
 ## Direct command
 
 The skill invokes `plugins/adscrawl/scripts/adscrawl.py`. You can run it directly:
 
 ```bash
 python3 plugins/adscrawl/scripts/adscrawl.py render \
-  --url 'https://example.com/' --format markdown --output page.md
+  --url 'https://www.adscrawl.net/' --format markdown --output page.md
 
 python3 plugins/adscrawl/scripts/adscrawl.py screenshot \
-  --url 'https://example.com/' --output page.png
+  --url 'https://www.adscrawl.net/' --output page.png
 ```
 
 Run `python3 plugins/adscrawl/scripts/adscrawl.py <command> --help` for the available options. API failures are not retried automatically.

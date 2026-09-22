@@ -1,6 +1,6 @@
 {
   "name": "adscrawl",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Read rendered web pages and capture screenshots with AdsCrawl browsers.",
   "author": {
     "name": "AdsCrawl",
@@ -22,9 +22,9 @@
     "privacyPolicyURL": "https://www.adscrawl.net/privacy-policy/",
     "termsOfServiceURL": "https://www.adscrawl.net/terms-of-service/",
     "defaultPrompt": [
-      "Read this JavaScript-heavy page and summarize it.",
-      "Capture a full-page screenshot of this URL.",
-      "Extract the main article from this page."
+      "Read https://www.adscrawl.net/ as rendered Markdown and summarize it.",
+      "Capture a full-page screenshot of https://www.adscrawl.net/.",
+      "Get the rendered HTML of https://www.adscrawl.net/ and list its main links."
     ],
     "brandColor": "#111827",
     "composerIcon": "./assets/icon.png",
