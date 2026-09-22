@@ -15,7 +15,7 @@ Create an [AdsCrawl account](https://app.adscrawl.net/register/) and set `ADSCRA
 
 ## Install from the repository marketplace
 
-Once this repository is published on GitHub:
+Install the plugin from this public GitHub repository:
 
 ```bash
 codex plugin marketplace add AdsCrawl/adscrawl-codex
