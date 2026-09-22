@@ -1,6 +1,6 @@
 {
   "name": "adscrawl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Read rendered web pages and capture screenshots with AdsCrawl browsers.",
   "author": {
     "name": "AdsCrawl",
@@ -28,6 +28,6 @@
     ],
     "brandColor": "#111827",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/logo.png"
+    "logo": "./assets/icon.png"
   }
 }
