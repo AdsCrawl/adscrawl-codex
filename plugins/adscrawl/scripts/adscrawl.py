@@ -85,7 +85,7 @@ def run(args: argparse.Namespace) -> None:
     request = Request(
         api.rstrip("/") + endpoint,
         data=json.dumps(body, separators=(",", ":")).encode("utf-8"),
-        headers={"Content-Type": "application/json", "X-API-Key": key, "User-Agent": "adscrawl-codex/0.1.0"},
+        headers={"Content-Type": "application/json", "X-API-Key": key, "User-Agent": "adscrawl-codex/0.1.1"},
         method="POST",
     )
     try:

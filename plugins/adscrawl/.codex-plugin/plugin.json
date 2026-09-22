@@ -1,6 +1,6 @@
 {
   "name": "adscrawl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read rendered web pages and capture screenshots with AdsCrawl browsers.",
   "author": {
     "name": "AdsCrawl",
